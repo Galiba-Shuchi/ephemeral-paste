@@ -1,0 +1,258 @@
+
+/* ==============================
+   Global Styles
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 55px 20px;
+}
+
+/* ==============================
+   Main Container
+============================== */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.07);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+.container > p {
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* ==============================
+   Editor
+============================== */
+
+.editor {
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1e293b;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* ==============================
+   Formatting Toolbar
+============================== */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.toolbar .format-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 38px;
+    padding: 0;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #dbe3ed;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toolbar .format-btn:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.toolbar .format-btn:active {
+    transform: scale(0.96);
+}
+
+/* ==============================
+   Live Preview
+============================== */
+
+.preview {
+    min-height: 150px;
+    padding: 22px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.preview h2 {
+    font-size: 18px;
+    color: #172554;
+    margin-bottom: 16px;
+}
+
+.preview strong {
+    font-weight: 700;
+}
+
+.preview em {
+    font-style: italic;
+}
+
+.preview del {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.preview code {
+    padding: 3px 7px;
+    background: #e2e8f0;
+    color: #1d4ed8;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+/* ==============================
+   Settings
+============================== */
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin-bottom: 28px;
+}
+
+.settings label {
+    margin-bottom: 0;
+}
+
+.settings select {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.settings select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ==============================
+   Main Button
+============================== */
+
+.container form > button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.container form > button[type="submit"]:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+
+@media (max-width: 650px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 24px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .settings {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        min-height: 210px;
+    }
+}
